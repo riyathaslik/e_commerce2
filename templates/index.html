@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Simple Flask Store</title>
+</head>
+<body>
+    <header>
+        <h1>Flask Store</h1>
+        <a href="{{ url_for('checkout') }}" class="cart-link">
+            🛒 Cart: {{ session['cart']|length }} items
+        </a>
+    </header>
+
+    <main class="product-grid">
+        {% for p in products %}
+        <div class="card">
+            <img src="{{ p.img }}" alt="{{ p.name }}">
+            <h3>{{ p.name }}</h3>
+            <p>${{ p.price }}</p>
+            <a href="{{ url_for('add_to_cart', product_id=p.id) }}" class="add-btn">Add to Cart</a>
+        </div>
+        {% endfor %}
+    </main>
+</body>
+</html>
