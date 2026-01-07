@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Fiesta - Online Clothing Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Fashion Fiesta</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <button id="cartBtn">Cart (0)</button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section class="hero">
+            <h2>Welcome to Fashion Fiesta!</h2>
+            <p>Your one-stop shop for the latest trends in fashion.</p>
+        </section>
+
+        <section class="product-grid">
+            <div class="product" onclick="showProductDetails('Product 1', 'Stylish dress for every occasion.', 50)">
+                <img src="assets/product1.jpg" alt="Stylish Dress">
+                <h3>Stylish Dress</h3>
+                <p>$50</p>
+            </div>
+            <!-- More products here -->
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
